@@ -7,5 +7,7 @@ var Router = Ember.Router.extend({
 
 export default Router.map(function() {
   this.route('about');
-  this.resource('categories');
+  this.resource('categories', function() {
+    this.route('show', {path: ':category_id'});
+  });
 });
