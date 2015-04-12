@@ -1,3 +1,5 @@
 {{#each}}
-  {{link-to title 'categories.show' this}}
+ {{~#link-to 'categories.show' this}}
+   {{title}} ({{recipes.length}})
+ {{~/link-to}}
 {{/each}}
